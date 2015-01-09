@@ -35,7 +35,7 @@
       <vbox class="tbb-logo-box" align="start">
         <image class="tbb-logo" />
       </vbox>
-      <separator orient="vertical" />
+      <separator orient="vertical" class="tbb-logo-separators" />
       <groupbox flex="1">
         <description>&torsettings.prompt;</description>
       </groupbox>
@@ -60,7 +60,7 @@
     <vbox class="tbb-logo-box" align="start">
       <image class="tbb-logo" />
     </vbox>
-    <separator />
+    <separator class="tbb-logo-separators" />
     <hbox>
       <vbox flex="1">
         <label class="question">&torSettings.proxyQuestion;</label>
@@ -79,7 +79,7 @@
     <vbox class="tbb-logo-box" align="start">
       <image class="tbb-logo" />
     </vbox>
-    <separator />
+    <separator class="tbb-logo-separators" />
     <label class="instructions">&torSettings.enterProxy;</label>
     <groupbox id="proxySpecificSettings" />
   </wizardpage>
@@ -89,7 +89,7 @@
     <vbox class="tbb-logo-box" align="start">
       <image class="tbb-logo" />
     </vbox>
-    <separator />
+    <separator class="tbb-logo-separators" />
     <hbox>
       <vbox flex="1">
         <label class="question">&torSettings.bridgeQuestion;</label>
@@ -109,7 +109,7 @@
     <vbox class="tbb-logo-box" align="start">
       <image class="tbb-logo" />
     </vbox>
-    <separator />
+    <separator class="tbb-logo-separators" />
     <vbox>
       <label id="bridgeSettingsPrompt"
              class="question">&torSettings.bridgeSettingsPrompt;</label>
