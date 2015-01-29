@@ -652,6 +652,9 @@ TorProcessService.prototype =
     else
     {
       // Get default path.
+      var env = Cc["@mozilla.org/process/environment;1"]
+                .getService(Ci.nsIEnvironment);
+
       if (TorLauncherUtil.isWindows)
       {
         if ("tor" == aTorFileType)
@@ -673,6 +676,11 @@ TorProcessService.prototype =
           path = "Data/Tor/torrc";
         else if ("tordatadir" == aTorFileType)
           path = "Data/Tor/";
+      }
+      if (env.exists("TORLAUNCHER_STANDALONE_PATH")) {
+        // for linux distros who are trying to run torlauncher as a standalone app under Firefox/IceWeasel
+        // the value of TORLAUNCHER_STANDALONE_PATH is in the form: /path-to-torbrowser-dir/Browser/TorBrowser
+        path = env.get("TORLAUNCHER_STANDALONE_PATH") + '/' + path;
       }
     }
 
